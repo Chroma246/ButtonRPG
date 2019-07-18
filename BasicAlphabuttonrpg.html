@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            body {
+                background-color: blue;
+            }
+            button {
+                background: green;
+                color: white;
+            }
+        </style>
+        <script>
+            var level = 0;
+            var rqdlevel = 8;
+            function lvlp() {
+                level += 1;
+            }
+            function lvlch() {
+                alert("Level: " + level);
+            }
+            function btl() {
+                if (level >= rqdlevel) {
+                    rqdlevel += 10
+                    alert("Beast Defeated. Next Boss Level: " + rqdlevel)
+                }
+                else {
+                    alert("Level Not High Enough")
+                }
+            }
+            function bslvlch() {
+                alert("Boss Level: " + rqdlevel)
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="lvlp()">
+            Level Up
+        </button>
+        <br>
+        <button onclick="lvlch()">
+            Check Level
+        </button>
+        <br>
+        <button onclick="btl()">
+            Challenge Boss
+        </button>
+        <br>
+        <button onclick="bslvlch()">
+            Check Boss Level
+        </button>
+        <marquee>Created by JsScript</marquee>
+    </body>
+</html>
