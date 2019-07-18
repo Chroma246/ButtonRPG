@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html>
     <head>
         <title>Page Title</title>
@@ -12,10 +12,12 @@
             }
         </style>
         <script>
+            var up = 1;
             var level = 0;
             var rqdlevel = 8;
+            var uplvl = 10;
             function lvlp() {
-                level += 1;
+                level += up;
             }
             function lvlch() {
                 alert("Level: " + level);
@@ -31,6 +33,16 @@
             }
             function bslvlch() {
                 alert("Boss Level: " + rqdlevel)
+            }
+            function upd() {
+                if (level >= uplvl) {
+                    up++
+                    uplvl + 10;
+                    alert("You now level up by: " + up)
+                }
+                else {
+                    alert("Level Not High Enough")
+                }
             }
         </script>
     </head>
@@ -50,6 +62,8 @@
         <button onclick="bslvlch()">
             Check Boss Level
         </button>
+        <br>
+        <button onclick="upd()">Upgrade Leveling</button>
         <marquee>Created by JsScript</marquee>
     </body>
 </html>
